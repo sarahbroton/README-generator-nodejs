@@ -90,8 +90,6 @@ function init () {
 
 init();
 
-const userName = questions.userName
-
 
 // // function to initialize program
 // function init() {
