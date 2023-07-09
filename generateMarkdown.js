@@ -24,8 +24,6 @@ function renderLicenseBadge(license) {
 
 }
 
-// licence types:' 'Creative Commons Attribution Share Alike 4.0', 'Academic Free LIcense v 3.0'
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 

@@ -9,8 +9,7 @@ const fs = require('fs');
 // ];
 
 // TODO: Create an array of questions for user input
-inquirer
-    .prompt ([
+questions = [
     {
         type: 'input',
         message: 'What is the title of your project?',
@@ -66,7 +65,7 @@ inquirer
         name: 'Questions'
     }
 
-])
+]
 
 // }
 // TODO: Create a function to write README file
@@ -74,19 +73,23 @@ inquirer
     
 // }
 
-// function code that DOES NOT work: 
+//****** ***********function code that DOES NOT work************************************** 
 // fs.writeFile('log.txt', answers, (err) =>   
 //         err ? console.error(err) : console.log('Success!'))
 function init () {
     inquirer.prompt(questions)
     .then((inquirerResponse, data) => {   
         console.log("Making ReadMe");
-        fs.writeFileSync("ReadMe.md", inquirerResponse, data);
+        fs.writeFileSync("generateMarkdown.js", inquirerResponse, data);
     })
     .catch((err) => {
         console.log(err);
     })
 }
+
+console.log("Generating your README next...")
+        const markdown = generateMarkdown(userResponses, userInfo);
+        console.log(markdown);
 
 init();
 
