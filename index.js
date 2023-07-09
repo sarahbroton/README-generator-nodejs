@@ -17,7 +17,7 @@ inquirer
         name: 'Project title',
     },
 
-    
+
     {
         type: 'input',
         message: 'What are title of your sections?',
@@ -47,7 +47,7 @@ inquirer
     {
         type: 'list',
         message: 'Choose a licence for this project.',
-        choices: ['MIT', 'Educational Community Licence v 2.0', 'Do What the F*ck You Want to Public License', 'Artistic License 1.0', 'Creative Commons license family', 'Creative Commons Attribution 4.0', 'Creative Commons Attribution Share Alike 4.0', 'Academic Free LIcense v 3.0'],
+        choices: ['MIT', 'Educational Community Licence v 2.0', 'Do What the F*ck You Want to Public License', 'Artistic License 2.0', 'Creative Commons Attribution Share Alike 4.0', 'Unlicence'],
         name: 'License'
     },
     {
@@ -67,21 +67,6 @@ inquirer
     }
 
 ])
-
- 
-
-// .then((data) =>
-//     response.confirm === response.password
-//       ? console.log('Success!')
-//       : console.log('You forgot')
-//   );
-
-//     fs.writeFile('log.txt', answers, (err) =>   
-//         err ? console.error(err) :console.log('Success!')
-
-
-// ); 
-   
 
 // }
 // TODO: Create a function to write README file
