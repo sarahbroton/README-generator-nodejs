@@ -1,5 +1,5 @@
 // array of questions for user
-
+var answers = []; 
 
 // = [
 // TODO: Include packages needed for this application
@@ -9,12 +9,15 @@ const fs = require('fs');
 // ];
 
 // TODO: Create an array of questions for user input
-const questions = ([
+inquirer
+    .prompt ([
     {
         type: 'input',
         message: 'What is the title of your project?',
-        name: 'Project title'
+        name: 'Project title',
     },
+
+    
     {
         type: 'input',
         message: 'What are title of your sections?',
@@ -65,15 +68,19 @@ const questions = ([
 
 ])
 
-.then((data) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot')
-  );
+ 
 
-    fs.writeFile('log.txt', answers, (err) =>   
-        err ? console.error(err) :console.log('Success!')
-); 
+// .then((data) =>
+//     response.confirm === response.password
+//       ? console.log('Success!')
+//       : console.log('You forgot')
+//   );
+
+//     fs.writeFile('log.txt', answers, (err) =>   
+//         err ? console.error(err) :console.log('Success!')
+
+
+// ); 
    
 
 // }
