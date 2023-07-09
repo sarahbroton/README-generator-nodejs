@@ -74,6 +74,25 @@ inquirer
     
 // }
 
+// function code that DOES NOT work: 
+// fs.writeFile('log.txt', answers, (err) =>   
+//         err ? console.error(err) : console.log('Success!'))
+function init () {
+    inquirer.prompt(questions)
+    .then((inquirerResponse, data) => {   
+        console.log("Making ReadMe");
+        fs.writeFileSync("ReadMe.md", inquirerResponse, data);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+}
+
+init();
+
+const userName = questions.userName
+
+
 // // function to initialize program
 // function init() {
 //     // TODO: Create a function to initialize app
