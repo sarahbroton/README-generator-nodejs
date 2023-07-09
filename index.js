@@ -65,16 +65,22 @@ const questions = ([
 
 ])
 
-    .then((response)) =>
-response.confirm === response.password
-    ? console.log('Sucess')
-    : console.log('You forgot');
+.then((data) =>
+    response.confirm === response.password
+      ? console.log('Success!')
+      : console.log('You forgot')
+  );
 
-// function to write README file
-// function writeToFile(fileName, data) {
+    fs.writeFile('log.txt', answers, (err) =>   
+        err ? console.error(err) :console.log('Success!')
+); 
+   
+
 // }
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) { }
+// function writeToFile(fileName, data) {
+    
+// }
 
 // // function to initialize program
 // function init() {
