@@ -68,31 +68,34 @@ questions = [
         type: 'input',
         message: 'Any questions',
         name: 'questions'
+    },
+    {
+        type: 'input',
+        message: 'What should the filename for this readme be?',
+        name: 'fileName'
     }
 
 ]
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
+function writeToFile(fileName, data) {
+fs.writeFileSync(fileName, data);
+}
 
 function init() {
     inquirer
     .prompt(questions)
-    .then((inquirerResponse,data) => {
+    .then((inquirerResponse) => {
         console.log(inquirerResponse); 
         console.log("making readme"); 
-        fs.writeFileSync("generateMarkdown.js", template(inquirerResponse), data);
+        writeToFile(`${inquirerResponse.fileName}.md`, generateMarkdown(inquirerResponse))
     })
     .catch((err) => {
         console.log(err); 
     });
 }
 
-const template = function (data) {
-    return `
-        The title of the project is $(data.title)
-        `; 
-}; 
+
 init();
 
 // *****************KEEPING THE BELOW COMMENTED OUT & WANT TO KEEP IT FOR MY RECORDS*************

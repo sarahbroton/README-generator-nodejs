@@ -6,7 +6,7 @@ function renderLicenseBadge(license) {
   let licenceType = license.data.license[0]; 
   let yourLicence = ''
   if(licenseType === 'MIT') {
-    yourLicence = '[!License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
+    yourLicence = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
   } else if (licenceType === 'Educational Community LIcense v 2.0'){
     yourLicence = '[License: Educationl Community](https://img.shield.io/badge/(needtocompletethis)'
   } else if (licenceType === 'Do What the F*uck You Want to Public License') {
@@ -37,6 +37,39 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  ## Section
+  ${data.section}
+
+  ## Table of Contents
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Licence](#licence)
+  * [Contributions](#contributions)
+  * [Tests](#tests)
+  * [Questions](#questions)
+
+  ## Description
+  ${data.description}
+
+  ## Installation
+  ${data.installation}
+
+  ## Usage
+  ${data.usage}
+
+  ## Licence
+  ${data.licence}
+
+  ## Contributions
+  ${data.contributions}
+
+  ## Tests
+  ${data.tests}
+
+  ## Questions
+  ${data.questions}
+
 `;
 }
 module.exports = generateMarkdown;
