@@ -72,31 +72,8 @@ questions = [
 
 ]
 
-// }
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
-    
-// }
-
-//****** ***********function code that DOES NOT work************************************** 
-// fs.writeFile('log.txt', answers, (err) =>   
-//         err ? console.error(err) : console.log('Success!'))
-// function init () {
-//     inquirer.prompt(questions)
-//     .then((inquirerResponse, data) => {   
-//         console.log("Making ReadMe");
-//         fs.writeFileSync("generateMarkdown.js", inquirerResponse, data);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     })
-// }
-
-// console.log('generateMarkdown')
-//         const markdown = generateMarkdown(userResponses, userInfo);
-//         console.log(markdown);
-
-// init();
 
 function init() {
     inquirer
@@ -116,7 +93,29 @@ const template = function (data) {
         The title of the project is $(data.title)
         `; 
 }; 
+init();
 
+// *****************KEEPING THE BELOW COMMENTED OUT & WANT TO KEEP IT FOR MY RECORDS*************
+//****** *********** code that DOES NOT work/i was so close :)************************************** 
+// fs.writeFile('log.txt', answers, (err) =>   
+//         err ? console.error(err) : console.log('Success!'))
+// function init () {
+//     inquirer.prompt(questions)
+//     .then((inquirerResponse, data) => {   
+//         console.log("Making ReadMe");
+//         fs.writeFileSync("generateMarkdown.js", inquirerResponse, data);
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     })
+// }
+
+// console.log('generateMarkdown')
+//         const markdown = generateMarkdown(userResponses, userInfo);
+//         console.log(markdown);
+
+// init();
+// ***************************************************************************************
 
 // // function to initialize program
 // function init() {
@@ -127,4 +126,4 @@ const template = function (data) {
 
 // // function call to initialize program
 // // Function call to initialize app
-init();
+// init();
