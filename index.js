@@ -1,5 +1,9 @@
 // array of questions for user
 var answers = []; 
+const userResponses = (''); 
+const userInfo = (''); 
+// const inquirerResponse = (''); 
+// const data = (''); 
 
 // = [
 // TODO: Include packages needed for this application
