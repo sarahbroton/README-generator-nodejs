@@ -18,56 +18,56 @@ questions = [
     {
         type: 'input',
         message: 'What is the title of your project?',
-        name: 'Project title',
+        name: 'title',
     },
 
 
     {
         type: 'input',
         message: 'What are title of your sections?',
-        name: 'Section title(s)'
+        name: 'section'
 
     },
     {
         type: 'input',
         message: 'Write a description of your project',
-        name: 'Project Description'
+        name: 'description'
     },
     {
         type: 'input',
         message: 'If applicable, enter in your table of contents.  If none, type in N/A',
-        name: 'Table of Contents'
+        name: 'contents'
     },
     {
         type: 'input',
         message: 'If applicable, describe the steps required to install your project for the Installation section. If none, type in N/A.',
-        name: 'Installation'
+        name: 'installation'
     },
     {
         type: 'input',
         message: 'Provide instructions and examples of your project for the Usage section.',
-        name: 'Usage'
+        name: 'usage'
     },
     {
         type: 'list',
         message: 'Choose a licence for this project.',
         choices: ['MIT', 'Educational Community Licence v 2.0', 'Do What the F*ck You Want to Public License', 'Artistic License 2.0', 'Creative Commons Attribution Share Alike 4.0', 'Unlicence'],
-        name: 'License'
+        name: 'license'
     },
     {
         type: 'input',
         message: 'If applicable, provide guidelines on how other developes can contribute to your project.',
-        name: 'Contributing'
+        name: 'contributing'
     },
     {
         type: 'input',
         message: 'If applicable, provide any tests written for your application and provide examples on how to run them.',
-        name: 'Tests'
+        name: 'tests'
     },
     {
         type: 'input',
         message: 'Any questions',
-        name: 'Questions'
+        name: 'questions'
     }
 
 ]
@@ -81,22 +81,41 @@ questions = [
 //****** ***********function code that DOES NOT work************************************** 
 // fs.writeFile('log.txt', answers, (err) =>   
 //         err ? console.error(err) : console.log('Success!'))
-function init () {
-    inquirer.prompt(questions)
-    .then((inquirerResponse, data) => {   
-        console.log("Making ReadMe");
-        fs.writeFileSync("generateMarkdown.js", inquirerResponse, data);
+// function init () {
+//     inquirer.prompt(questions)
+//     .then((inquirerResponse, data) => {   
+//         console.log("Making ReadMe");
+//         fs.writeFileSync("generateMarkdown.js", inquirerResponse, data);
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     })
+// }
+
+// console.log('generateMarkdown')
+//         const markdown = generateMarkdown(userResponses, userInfo);
+//         console.log(markdown);
+
+// init();
+
+function init() {
+    inquirer
+    .prompt(questions)
+    .then((inquirerResponse,data) => {
+        console.log(inquirerResponse); 
+        console.log("making readme"); 
+        fs.writeFileSync("generateMarkdown.js", template(inquirerResponse), data);
     })
     .catch((err) => {
-        console.log(err);
-    })
+        console.log(err); 
+    });
 }
 
-console.log('generateMarkdown')
-        const markdown = generateMarkdown(userResponses, userInfo);
-        console.log(markdown);
-
-init();
+const template = function (data) {
+    return `
+        The title of the project is $(data.title)
+        `; 
+}; 
 
 
 // // function to initialize program
@@ -108,4 +127,4 @@ init();
 
 // // function call to initialize program
 // // Function call to initialize app
-// init();
+init();
