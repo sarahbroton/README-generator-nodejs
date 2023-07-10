@@ -5,6 +5,7 @@ var answers = [];
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./Utils/generateMarkdown'); 
 
 // ];
 
@@ -87,7 +88,7 @@ function init () {
     })
 }
 
-console.log("Generating your README next...")
+console.log('generateMarkdown')
         const markdown = generateMarkdown(userResponses, userInfo);
         console.log(markdown);
 
