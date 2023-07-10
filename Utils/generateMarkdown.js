@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
   if(licenseType === 'MIT') {
     yourLicence = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
   } else if (licenceType === 'Educational Community LIcense v 2.0'){
-    yourLicence = '[License: Educationl Community](https://img.shield.io/badge/(needtocompletethis)'
+    yourLicence = '[License: Educational Community](https://img.shield.io/badge/(needtocompletethis)'
   } else if (licenceType === 'Do What the F*uck You Want to Public License') {
     yourLicence = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
   } else if (licenceType === 'Artistic License 1.0') {
@@ -40,6 +40,9 @@ function generateMarkdown(data) {
   ## Section
   ${data.section}
 
+  ## Licence
+  ${yourLicence}
+
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
@@ -68,6 +71,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
+  Any questions should be directed to: ${data.ghusername}
   ${data.questions}
 
 `;

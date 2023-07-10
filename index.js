@@ -73,6 +73,12 @@ questions = [
         type: 'input',
         message: 'What should the filename for this readme be?',
         name: 'fileName'
+    }, 
+
+    {   type: 'input', 
+        message: 'What is your GitHub username?', 
+        name: 'ghusername'
+
     }
 
 ]
