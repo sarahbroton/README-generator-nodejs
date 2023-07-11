@@ -3,23 +3,20 @@
 // If there is no license, return an empty string
 
 function renderLicenseBadge(license) {
-  let licenceType = license.data.license[0]; 
-  let yourLicence = ''
-  if(licenseType === 'MIT') {
-    yourLicence = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
-  } else if (licenceType === 'Educational Community LIcense v 2.0'){
-    yourLicence = '[License: Educational Community](https://img.shield.io/badge/(needtocompletethis)'
-  } else if (licenceType === 'Do What the F*uck You Want to Public License') {
-    yourLicence = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
-  } else if (licenceType === 'Artistic License 1.0') {
-    yourLicence = '[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)]'
-  } else if (licenseType === 'Creative Commons Attribution Share Alike 4.0') {
-    yourLicence = '[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)]'
-  } else if (licenseType === 'The Unlicence') {
-    yourLicence = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
-  } else {
-    license.license = "N/A"
-  }
+  console.log(license); 
+  let yourLicense = ''
+  if(license === 'MIT') {
+    yourLicense = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
+  } else if (license === 'Do What the F*uck You Want to Public License') {
+    yourLicense = '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+  } else if (license === 'Artistic License 2.0') {
+    yourLicense = '![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)]'
+  } else if (license === 'Creative Commons Attribution Share Alike 4.0') {
+    yourLicense = '![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)]'
+  } else if (license === 'The Unlicence') {
+    yourLicense = '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+  } 
+  
   return yourLicense; 
 
 }
@@ -37,20 +34,19 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ## Section
-  ${data.section}
-
+  
   ## Licence
-  ${yourLicence}
+  ${renderLicenseBadge(data.license)}
 
   ## Table of Contents
-  * [Description](#description)
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Licence](#licence)
-  * [Contributions](#contributions)
-  * [Tests](#tests)
-  * [Questions](#questions)
+  1. [Description](#description)
+  2. [Installation](#installation)
+  3. [Usage](#usage)
+  4. [Credits](#credits)
+  5. [Licence](#licence)
+  6. [Contributions](#contributions)
+  7. [Tests](#tests)
+  8. [Questions](#questions)
 
   ## Description
   ${data.description}
@@ -61,8 +57,8 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ## Licence
-  ${data.licence}
+  ## Credits
+  ${data.credits}
 
   ## Contributions
   ${data.contributions}
@@ -72,7 +68,7 @@ function generateMarkdown(data) {
 
   ## Questions
   Any questions should be directed to: ${data.ghusername}
-  ${data.questions}
+  // Your questions: ${data.questions}
 
 `;
 }

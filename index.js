@@ -21,23 +21,12 @@ questions = [
         name: 'title',
     },
 
-
-    {
-        type: 'input',
-        message: 'What are title of your sections?',
-        name: 'section'
-
-    },
     {
         type: 'input',
         message: 'Write a description of your project',
         name: 'description'
     },
-    {
-        type: 'input',
-        message: 'If applicable, enter in your table of contents.  If none, type in N/A',
-        name: 'contents'
-    },
+    
     {
         type: 'input',
         message: 'If applicable, describe the steps required to install your project for the Installation section. If none, type in N/A.',
@@ -48,16 +37,20 @@ questions = [
         message: 'Provide instructions and examples of your project for the Usage section.',
         name: 'usage'
     },
+    {   type: 'input', 
+        message: 'List Your collaborators, if any, with links to their Github profiles. If you used any third-party assets that require attribution list them here.  If you followed tutoritals, include links to those as well.', 
+        name: 'credits'
+    }, 
     {
         type: 'list',
         message: 'Choose a licence for this project.',
-        choices: ['MIT', 'Educational Community Licence v 2.0', 'Do What the F*ck You Want to Public License', 'Artistic License 2.0', 'Creative Commons Attribution Share Alike 4.0', 'Unlicence'],
+        choices: ['MIT', 'Do What the F*ck You Want to Public License', 'Artistic License 2.0', 'Creative Commons Attribution Share Alike 4.0', 'Unlicence'],
         name: 'license'
     },
     {
         type: 'input',
         message: 'If applicable, provide guidelines on how other developes can contribute to your project.',
-        name: 'contributing'
+        name: 'contributions'
     },
     {
         type: 'input',
