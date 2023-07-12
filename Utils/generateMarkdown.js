@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
     yourLicense = '![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)'
   } else if (license === 'Creative Commons Attribution Share Alike 4.0') {
     yourLicense = '![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)'
-  } else if (license === 'The Unlicence') {
+  } else if (license === 'The Unlicense') {
     yourLicense = '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)'
   } 
   

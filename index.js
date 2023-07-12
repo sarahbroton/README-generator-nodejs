@@ -44,7 +44,7 @@ questions = [
     {
         type: 'list',
         message: 'Choose a licence for this project.',
-        choices: ['MIT', 'Do What the F*ck You Want to Public License', 'Artistic License 2.0', 'Creative Commons Attribution Share Alike 4.0', 'Unlicence'],
+        choices: ['MIT', 'Do What the F*uck You Want to Public License', 'Artistic License 2.0', 'Creative Commons Attribution Share Alike 4.0', 'The Unlicense'],
         name: 'license'
     },
     {
