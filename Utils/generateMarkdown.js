@@ -106,8 +106,8 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  Any questions should be directed to: ${data.ghusername}
-  Your questions: ${data.questions}
+  * Any questions should be directed to: ${data.ghusername}
+  * Your questions: ${data.questions}
 
 `;
 }
