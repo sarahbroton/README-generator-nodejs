@@ -50,15 +50,15 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   let yourLicenseDescription = ''
   if (license === 'MIT') {
-    yourLicenseDescription = 'https://choosealicense.com/appendix/'
+    yourLicenseDescription = 'MIT License'
   } else if (license === 'Do What the F*uck You Want to Public License') {
-    yourLicenseDescription = 'https://choosealicense.com/appendix/'
+    yourLicenseDescription = 'Do What the F*uck You Want to Public License'
   } else if (license === 'Artistic License 2.0') {
-    yourLicenseDescription = 'https://choosealicense.com/appendix/'
+    yourLicenseDescription = 'Artistic License 2.0'
   } else if (license === 'Creative Commons Attribution Share Alike 4.0') {
-    yourLicenseDescription = 'https://choosealicense.com/appendix/'
+    yourLicenseDescription = 'Creative Commons Attribution Share Alike 4.0'
   } else if (license === 'The Unlicense') {
-    yourLicenseDescription = 'https://choosealicense.com/appendix/'
+    yourLicenseDescription = 'Unlicense'
   }
 
   return yourLicenseDescription;
@@ -94,9 +94,10 @@ function generateMarkdown(data) {
   ## Credits
   ${data.credits}
   
-  ## Licence
-  ${renderLicenseLink(data.license)}
-  ${renderLicenseSection(data.license)}
+  ## License Details
+  - You choose:  ${renderLicenseSection(data.license)}
+  - License details can be found at ${renderLicenseLink(data.license)}
+  - For additional details on your license, please visit https://choosealicense.com/appendix/
 
   ## Contributions
   ${data.contributions}
@@ -106,7 +107,7 @@ function generateMarkdown(data) {
 
   ## Questions
   Any questions should be directed to: ${data.ghusername}
-  // Your questions: ${data.questions}
+  Your questions: ${data.questions}
 
 `;
 }
