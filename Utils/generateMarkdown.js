@@ -40,7 +40,7 @@ function renderLicenseLink(license) {
     yourLicenseLink = 'https://choosealicense.com/licenses/unlicense/'
   }
 
-  return yourLicense;
+  return yourLicenseLink;
 }
 
 
@@ -61,7 +61,7 @@ function renderLicenseSection(license) {
     yourLicenseDescription = 'https://choosealicense.com/appendix/'
   }
 
-  return yourLicense;
+  return yourLicenseDescription;
 }
 
 
@@ -69,7 +69,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
   
-  ## Licence
+  ## License
   ${renderLicenseBadge(data.license)}
 
   ## Table of Contents

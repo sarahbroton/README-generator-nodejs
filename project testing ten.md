@@ -1,7 +1,7 @@
-# project testing five
+# project testing ten
   
   ## Licence
-  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+  ![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)
 
   ## Table of Contents
   1. [Description](#description)
@@ -26,7 +26,8 @@
   asdf
   
   ## Licence
-  undefined
+  https://choosealicense.com/licenses/cc-by-sa-4.0/
+  https://choosealicense.com/appendix/
 
   ## Contributions
   asdf
@@ -36,5 +37,5 @@
 
   ## Questions
   Any questions should be directed to: git@github.com
-  // Your questions: asdf
+  // Your questions: adfs
 
