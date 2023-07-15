@@ -123,6 +123,7 @@ This project is licensed under the terms as the MIT licence found in GitHub.
 ## Mock-up (Screenshot)
 The following image shows the generator's appearance and functionality.
 
+![image](https://github.com/sarahbroton/README-generator-nodejs/assets/130716239/0ac472db-3feb-4557-b9cb-ab12b8d32fbd)
 
 ## Link
 https://sarahbroton.github.io/README-generator-nodejs/
