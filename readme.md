@@ -49,18 +49,28 @@ THEN I am taken to the corresponding section of the README
 1. Node.js
     * scripts:       nodemon
     * dependencies:  inquirer package
-2. github
+2. GitHub
 3. javascript 
 4. VSC (Visual Studio Code)
 5. Walkthough Video
-    * 
+    * Screencastify
+6. Adding badges
+    * Licenses
+
 
 ## To Contribute to this project
 We welcome contributions! Here are some ways you can get started:
-1. Report bugs: If you encouter any bugs, please let us know by opening up an issues and let us know the problem
-2. Contribute Code: If you are a developer and want to contribute, follow the instructions below to get started
-3. Suggestions: If you don't want to code and have some awesome ideas, open up an issue explaining some updates or improvements you would like to see
-4. Documentation: If you see the need for some additional documentation, feel free to add some
+1.  Report bugs: If you encouter any bugs, please let us know by opening up an issues and let us know the problem
+2.  Contribute Code: If you are a developer and want to contribute, follow the instructions below to get started
+3.  Suggestions: If you don't want to code and have some awesome ideas, open up an issue explaining some updates or improvements you would like to see
+4.  Documentation: If you see the need for some additional documentation, feel free to add some
+
+Instructions:  
+1.  Fork this repository
+2.  Clone the forked repo
+3.  Add your contributions (code or documentation)
+4.  Commit and push
+5.  Wait for a pull request to be merged
 
 ## Usage
 1.  Deliverables: 20%
@@ -115,4 +125,4 @@ The following image shows the generator's appearance and functionality.
 
 
 ## Link
-
+https://sarahbroton.github.io/README-generator-nodejs/
